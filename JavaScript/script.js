@@ -80,3 +80,11 @@ savetaskbtn.addEventListener("click", function(){
     addtaskinput.value='';
     showtask();
 })
+
+function deleteitem(index){
+    let webtask = localStorage.getItem("localstorage");
+    let taskObj = JSON.parse(webtask);
+    taskObj.splice(index, 1);
+    localStorage.setItem("localstorage", JSON.stringify(taskObj));
+    showtask();
+}

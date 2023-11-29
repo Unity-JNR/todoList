@@ -47,12 +47,14 @@ section.todo-outer h1 {
 #addtaskbtn{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;   
+ -webkit-text-fill-color: transparent;  
+ display: inline-block;   
 }
 #deleteallbtn{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;    
+ -webkit-text-fill-color: transparent;  
+ display: inline-block;    
 }
 table tr td button {
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
@@ -70,6 +72,7 @@ table tr td button {
         border: none;
         outline: none;
         background: none;
+         
     }
 
     #savetaskbtn{
@@ -77,9 +80,12 @@ table tr td button {
         background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;  
+ 
     }
   #sort{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;   
+ -webkit-text-fill-color: transparent; 
+ display: inline-block;  
+
   }
