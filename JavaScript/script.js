@@ -3,6 +3,7 @@ let addtaskbtn = document.getElementById('addtaskbtn')
 showtask()
 addtaskbtn.addEventListener('click',function(){
    let addtaskinputval = addinput.value
+   
     if(addtaskinputval.trim()!=0){
         let webtask =localStorage.getItem('localstorage')
         if (webtask == null){
@@ -44,3 +45,38 @@ function showtask(){
     });
     addedtasklist.innerHTML = html;
 }
+
+function edittask(index) {
+   let saveindex = document.getElementById('saveindex') 
+   let addtaskbtn = document.getElementById('addtaskbtn')
+   let savebtn = document.getElementById('savetaskbtn')
+   saveindex.value = index
+
+   let webtask = localStorage.getItem('localstorage')
+   let taskObj= JSON.parse(webtask)
+
+   addinput.value = taskObj[index]['task_name']
+   addtaskbtn.style.display ='none'
+   savebtn.style.display = 'block';
+}
+
+let savetaskbtn = document.getElementById("savetaskbtn");
+savetaskbtn.addEventListener("click", function(){
+    let addtaskbtn = document.getElementById("addtaskbtn");
+    let webtask = localStorage.getItem("localstorage");
+    let taskObj = JSON.parse(webtask); 
+    let saveindex = document.getElementById("saveindex").value;
+    
+    for (keys in taskObj[saveindex]) {
+        if(keys == 'task_name'){
+            taskObj[saveindex].task_name = addtaskinput.value;
+        }
+      }
+    // taskObj[saveindex] = {'task_name':addtaskinput.value, 'completeStatus':false} ;
+  //  taskObj[saveindex][task_name] = addtaskinput.value;
+    savetaskbtn.style.display="none";
+    addtaskbtn.style.display="block";
+    localStorage.setItem("localstorage", JSON.stringify(taskObj));
+    addtaskinput.value='';
+    showtask();
+})
