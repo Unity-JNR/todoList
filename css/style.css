@@ -74,6 +74,9 @@ table tr td button {
 
     #savetaskbtn{
         display: none;
+        background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
+    -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;  
     }
   #sort{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
