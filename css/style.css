@@ -1,5 +1,5 @@
 :root {
-    --main-dark: #333333;  /* Dark background */
+    --main-dark: #080808;  /* Dark background */
     --main-darker: #111111;  /* Darker background */
     --main-darkest: #000000;  /* Darkest background */
     --neutral-gray: #808080;  /* Neutral gray */
@@ -71,3 +71,8 @@ table tr td button {
         outline: none;
         background: none;
     }
+
+    #savetaskbtn{
+        display: none;
+    }
+  
