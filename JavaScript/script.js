@@ -88,3 +88,38 @@ function deleteitem(index){
     localStorage.setItem("localstorage", JSON.stringify(taskObj));
     showtask();
 }
+
+let addedtasklist = document.getElementById("addedtasklist");
+    addedtasklist.addEventListener("click", function(e){
+       // console.log(e);
+        
+        // showtask();
+        let webtask = localStorage.getItem("localstorage");
+        let taskObj = JSON.parse(webtask);
+        
+        let mytarget = e.target;
+        if(mytarget.classList[0] === 'text-success'){
+        let mytargetid = mytarget.getAttribute("id");
+        
+        
+        // let taskValue = taskObj[mytargetid]['task_name'];
+        
+        mytargetpresibling = mytarget.parentElement.previousElementSibling.previousElementSibling;
+            
+            // let mynewelem = mytargetpresibling.classList.toggle("completed");
+            // taskObj.splice(mytargetid,1,mynewelem);
+            for (keys in taskObj[mytargetid]) {
+                if(keys == 'completeStatus' && taskObj[mytargetid][keys]==true){
+                    taskObj[mytargetid].completeStatus = false;
+                   // taskObj[mytargetid] = {'task_name':taskValue, 'completeStatus':false};
+                }else if(keys == 'completeStatus' && taskObj[mytargetid][keys]==false){
+                    taskObj[mytargetid].completeStatus = true;
+                    //taskObj[mytargetid] = {'task_name':taskValue, 'completeStatus':true};
+                }
+              }
+        //}
+       // showtask();        
+        localStorage.setItem("localstorage", JSON.stringify(taskObj));
+        showtask();
+    }
+    })
