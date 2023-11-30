@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="todo-outer container-fluid">
+    <!-- <section class="todo-outer container-fluid">
         <div class="container-fluid">
             
         
@@ -17,33 +17,33 @@
           <div class="row justify-content-md-center">
             <div class="col-sm-12 col-md-8">
               <h1><picture>
-                <!-- display images , smaller screens will have a different image -->
+                
                <i class="fa fa-list-alt"></i>
                 Todo List </h1>
               <div class="todo-inner">
                 <div class="form-row">
                   <div class="col-8 mr-sm-2">
-                    <!-- text box to input what task you need to do -->
+                    
                     <input type="text" class="form-control mb-2" placeholder="Enter your task" id="addtaskinput" />
-                    <!-- <input type="date" class="form-control" id="addtaskdate"/> code work but didnt change when edited for the date -->
+                    
                     <input type="hidden" id="saveindex">
                   </div>
-                  <!-- button to add task to the list -->
+                 
                   <button type="button" class="btn btn-success mr-sm-2" id="addtaskbtn">
                     Add Task
                   </button>
-                  <!-- button will appear when edit button is clicked on the task list -->
+                 
                   <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn">
                     Save Task
                   </button>
-                  <!-- will remove all task that has been added -->
+                  
                   <button type="button" id="deleteallbtn" class="btn btn-warning">
                     Delete All
                   </button>
 
                   <button type="button" id="sort" class="btn btn-success">Sort</button>
                 </div>
-                <!-- all task will display in this area -->
+                
                 <div class="to-do-output">
                   <table class="table table-striped mt-3 mb-0" id="addedtasklist">
                     
@@ -54,7 +54,22 @@
           </div>
         </div>
     </div>
+      </section> -->
+      <section class="todo-outer">
+        <div class="todo-inner">
+          <h1><i class="fa fa-list-alt"></i> Todo List</h1>
+          <input type="text" class="form-control mb-2" placeholder="Enter your task" id="addtaskinput" />
+          <input type="hidden" id="saveindex">
+          <button type="button" class="btn" id="addtaskbtn">Add Task</button>
+          <button type="button" class="btn" id="savetaskbtn">Save Task</button>
+          <button type="button" id="deleteallbtn" class="btn">Delete All</button>
+          <button type="button" id="sort" class="btn">Sort</button>
+          <div class="to-do-output">
+            <table class="table" id="addedtasklist"></table>
+          </div>
+        </div>
       </section>
+      
     
 
     
