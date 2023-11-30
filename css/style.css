@@ -28,7 +28,7 @@
 body{ background: var(--main-darkest);
     color: white;}
 
-section.todo-outer {
+/* section.todo-outer {
     width: 100%;
     float: left;
     padding: 30px 0;
@@ -36,25 +36,55 @@ section.todo-outer {
 section.todo-outer h1 {
     font-size: 40px;
     margin-bottom: 20px;
-}
+} */
 .todo-inner {
-    width: 100%;
-    float: left;
+    width: 50%;
+    margin-left: 25%;
     padding: 40px;
     box-shadow: 0px 0px 10px hsl(0, 0%, 76%);
     background: var(--main-dark)
 }
+
+.todo-outer {
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .todo-inner h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    margin-right: 10px;
+    flex-basis: calc(20% - 10px); /* Adjust the width as needed, considering margin */
+    /* margin-right: 10px; */
+  }
+  
+  .to-do-output {
+    margin-top: 20px;
+  }
+  
+  
+  
 #addtaskbtn{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;  
- display: inline-block;   
+ /* display: inline-block;    */
 }
 #deleteallbtn{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;  
- display: inline-block;    
+ /* display: inline-block;     */
 }
 table tr td button {
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
@@ -72,6 +102,8 @@ table tr td button {
         border: none;
         outline: none;
         background: none;
+    flex-basis: calc(20% - 10px); /* Adjust the width as needed, considering margin */
+
          
     }
 
@@ -80,12 +112,44 @@ table tr td button {
         background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;  
+ /* display: inline-block;   */
  
     }
   #sort{
     background-image: linear-gradient(to right, var(--highlight-orange), var(--highlight-green));
     -webkit-background-clip: text;
  -webkit-text-fill-color: transparent; 
- display: inline-block;  
+ /* display: inline-block;   */
 
   }
+
+ 
+  
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .todo-inner {
+      padding: 20px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 768px) {
+    .todo-inner {
+      padding: 25px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    .todo-inner {
+      padding: 30px;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .todo-inner {
+      padding: 40px;
+    }
+  }
+
+  
+  
